@@ -8,12 +8,18 @@
 //     .then((Data) => console.log(Data));
 // }
 
-function loadData2() {
-  fetch("https://jsonplaceholder.typicode.com/users/2") //load this url in JSON placeholder site with users
-    .then((response) => response.json())
-    .then((Data) => Addbutton(Data));
+function loadUsers2() {
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then((res) => res.json())
+    .then((DataArray) => AddData(DataArray));
 }
 
-function Addbutton(Data) {
-  console.log(Data);
+function AddData(DataArray) {
+  const ul = document.getElementById("user-list");
+  for (const User of DataArray) {
+    const nameuser = User.username;
+    const li = document.createElement("li");
+    li.innerText = nameuser;
+    ul.appendChild(li);
+  }
 }
