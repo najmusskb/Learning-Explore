@@ -1,0 +1,33 @@
+document.getElementById("button").addEventListener("click", function () {
+  console.log("yes im working !!!!!");
+  const depositInput = document.getElementById("depositInput");
+  const depositvalueCollection = depositInput.value;
+  const parseIntDepositValues = parseInt(depositvalueCollection);
+  const finalDepositValur = parseIntDepositValues;
+  depositInput.value = "";
+  const DespositLED = document.getElementById("depositLED");
+  const DespositLEDParseInt = parseInt(DespositLED.innerText);
+  const DepositSumation = finalDepositValur + DespositLEDParseInt;
+  DespositLED.innerText = DepositSumation;
+  const totalBalance = document.getElementById("Total_balance");
+  const ParseTotalBalance = totalBalance.innerText;
+  const ParseIntTotalBalance = parseInt(ParseTotalBalance);
+  const previousTotal = DepositSumation;
+  console.log("previous Total", previousTotal);
+  totalBalance.innerText = previousTotal;
+});
+document.getElementById("widraw").addEventListener("click", function () {
+  const widrawvalue = parseInt(document.getElementById("widrawvalue").value);
+  const text = document.getElementById("widrawtext");
+  const parstext = parseInt(text.innerText);
+  document.getElementById("widrawvalue").value = "";
+  const finaltext = parstext;
+  const finalwidrawvalu = widrawvalue;
+  const totalwidraw = finalwidrawvalu + finaltext;
+  text.innerText = totalwidraw;
+  const total = document.getElementById("Total_balance").innerText;
+  const newtotal = parseInt(total);
+  const widrawtotalbalance = newtotal - finalwidrawvalu;
+  console.log(widrawtotalbalance);
+  document.getElementById("Total_balance").innerText = widrawtotalbalance;
+});

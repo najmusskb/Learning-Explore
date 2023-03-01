@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Calculation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.50.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body class="text-center">
+    <h1 class="text-center text-7xl mt-24 text-red-500">Pubali Bank Limited</h1>
+    <p class="divider">OR</p>
+    <div class="stats shadow mt-24">
+      <div class="stat">
+        <div class="stat-figure text-secondary"></div>
+        <div class="stat-title text-4xl text-blue-600">Deposit</div>
+        <div class="stat-value">
+          <p>$<span class="text-yellow-600 p-3" id="depositLED">00</span></p>
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-figure text-secondary"></div>
+        <div class="stat-title text-4xl text-red-600">Withdraw</div>
+        <div class="stat-value">
+          <p>$<span class="text-yellow-600 p-3" id="widrawtext">00</span></p>
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-figure text-secondary"></div>
+        <div class="stat-title text-4xl text-red-600">Total Balance</div>
+        <div class="stat-value">
+          <p>$<span class="text-yellow-600 p-3" id="Total_balance">00</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex">
+      <div>
+        <div class="form-control p-20">
+          <label class="label"> </label>
+          <label class="input-group">
+            <span>Please Deposit Here</span>
+            <input id="depositInput" type="number" placeholder="Type Me"
+            class="input input-bordered"/ >
+            <span>USD</span>
+          </label>
+          <buttonn
+            id="button"
+            class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-5"
+          >
+            Submit Here
+          </buttonn>
+        </div>
+      </div>
+      <div>
+        <div class="form-control p-20">
+          <label class="label"> </label>
+          <label class="input-group">
+            <span>Please Withdraw Here</span>
+            <input type="number" placeholder="Type Me" class="input
+            input-bordered" id="widrawvalue"/ >
+            <span>USD</span>
+          </label>
+          <button
+            class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-5"
+            id="widraw"
+          >
+            Submit Here
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
